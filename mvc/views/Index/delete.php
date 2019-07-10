@@ -19,48 +19,33 @@
      <div class="row">
   <div class="col-sm-12">
 
+         
+<?php
+require_once 'controllers/Index.php';
 
+//if ($this -> User) {
+  if($User) {?>
+                <br><i>Usunąłeś swoje dane: <?= $User ?></i></br>
+                
 
-    <form action="/mvc/Index/store" method="post">
- 
-    <div>
-
-    Imię:<br />
-
-    <input name="imie" value="" /><br />
-
-    Nazwisko:<br />
-
-    <input name="nazwisko" value="" /><br />
-
-    Zawód:<br />
-
-    <input name="zawod" value="" /><br />
-	
-	Numer telefonu:<br />
-
-    <input name="numer" value="" /><br />
-	
-	Data urodzenia:<br />
-	
-	<input type="date" name="urodziny" min="1890-01-01" max="2019-12-31" /><br />
-
-    Adres e-mail:<br />
-
-    <input name="email" value="" /><br />
-
-
-    <input type="submit" class="btn btn-success" value="Wyślij" name="submit"/>
-
-    </div>
-
-    </form>   
-
+                <form action="/mvc/Index/news" method="post">
   
+<input type="submit" class="btn btn-success" value="powrót do formularza" />
+    </form>
 
-<body>
+
+<?php } else{?>
 
 
+
+
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h3>Nie udało sie usunac uzytkownika.</h3>
+    </div>
+</div>
+<?php }?>
 </div>
  </div>
     </div>
