@@ -13,7 +13,7 @@ class Model{
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
       
         // print_r($data);
-         print_r($data[0]->imie);
+         //print_r($data[0]->imie);
          if ($data) {
              return $data;
          }
@@ -30,7 +30,7 @@ class Model{
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
       
         // print_r($data);
-         print_r($data[0]->imie);
+         //print_r($data[0]->imie);
          if ($data) {
              return $data;
          }

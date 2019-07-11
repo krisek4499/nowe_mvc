@@ -10,7 +10,7 @@ class Router{
         $this -> request = rtrim($this -> request, "/");
         //explode rozbija ciag znaków oddzielony separatorem /
         $this -> params = explode("/", $this -> request);
-       //echo $this ->  controller;
+    
         $this -> controller = $this -> params[0];
         if($this -> controller == "index.php") $this -> controller = "Index";
         //ucfirst pierwsza litera duza

@@ -5,23 +5,23 @@ class View{
    protected $data = [];
 
     function __construct(){
-   //$this -> data = $data;
+  
        }
        public function Render($where,$tab){
 
-           echo $this -> controller;
-           echo $this -> page;
+          // echo $this -> controller;
+          // echo $this -> page;
          $User=$tab;
          $Where=$where;
-        // echo $User;
+      
          if($Where==="news"){
           require_once 'views/Index/news.php';
-          //require_once 'views/Index/show.php';
+    
           $this -> page=$Where;
          }
          else if($Where==="store"){
             require_once 'views/Index/store.php';
-            //require_once 'views/Index/show.php';
+      
             $this -> page=$Where;
            }
            else if($Where==="show"){
@@ -47,7 +47,7 @@ class View{
 else {
           require_once 'views/Error.php';
 }
-          //require_once 'views/' . $this -> controller . '/' . $this -> page . '.php';
+
           $plik="";
           if (isset($this -> controller)&&isset($this -> page))
           $plik = 'views/' . $this ->  controller . '/' . $this -> page. '.php';
